@@ -26,8 +26,8 @@ try {
 or
 
 ```java
-Databases.from(db).inTransaction(db -> {
-  db.delete("users", "first_name = ?", new String[] { "Andrew" });
+Databases.from(db).inTransaction(it -> {
+  it.delete("users", "first_name = ?", new String[] { "Andrew" });
 });
 ```
 
